@@ -49,7 +49,7 @@ class FileStorage:
 
         try:
             with open(self.__file_path, 'r') as f:
-                data = json.load(f)
+                data = json.load(seri, f)
                 for key, value in data.items():
                     class_name = obj_dict["__class__"]
                     self.__objects[key] = self.classes[class_name](**obj_dict)

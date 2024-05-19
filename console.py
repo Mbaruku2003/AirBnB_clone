@@ -12,6 +12,8 @@ from models.place import Place
 
 
 class HBNBCommand(cmd.Cmd):
+    """Prompt for file."""
+
     prompt = "(hbnb) "
 
     def do_quit(sef, arg):
@@ -19,20 +21,10 @@ class HBNBCommand(cmd.Cmd):
 
         return True
 
-    def help_quit(self):
-        """Helps one quit."""
-
-        print("Quit command to exit program")
-
     def do_EOF(self, arg):
         """Exit the program."""
 
         return True
-
-    def help_EOF(self):
-        """Help for end of file."""
-
-        print("Exit the program")
 
     def emptyline(self):
         """Empty line."""

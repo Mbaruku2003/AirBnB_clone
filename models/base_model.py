@@ -2,6 +2,7 @@
 """Define a class."""
 from datetime import datetime
 import uuid
+import models
 
 
 class BaseModel:
