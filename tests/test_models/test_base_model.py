@@ -7,6 +7,7 @@ import unittest
 
 
 class TestBaseModel(unittest.TestCase):
+    """Define a class."""
 
     def test_attributes(self):
         """Define testing attributes."""

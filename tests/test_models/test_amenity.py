@@ -5,6 +5,8 @@ from models.amenity import Amenity
 
 
 class TestAmenity(unittest.TestCase):
+    """Define the test class."""
+
     def test_amenity_attributes(self):
         """Tests for amenity."""
 

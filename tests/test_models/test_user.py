@@ -5,6 +5,8 @@ from models.user import User
 
 
 class TestUser(unittest.TestCase):
+    """Define a test class."""
+
     def test_user_attributes(self):
         """Define a test for users."""
 

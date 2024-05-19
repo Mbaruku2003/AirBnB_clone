@@ -5,6 +5,8 @@ from models.review import Review
 
 
 class TestReview(unittest.TestCase):
+    """Define a testcase."""
+
     def test_review_attributes(self):
         """Define test for attributes."""
 

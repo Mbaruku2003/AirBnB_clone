@@ -5,6 +5,8 @@ from models.place import Place
 
 
 class TestPlace(unittest.TestCase):
+    """Define a test class."""
+
     def test_place_attributes(self):
         """Define a test for a place."""
 

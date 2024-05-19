@@ -8,6 +8,8 @@ from models.base_model import BaseModel
 
 
 class TestFileStorage(unittest.TestCase):
+    """Test for class."""
+
     def setUp(self):
         """instances to be used by all methods."""
 

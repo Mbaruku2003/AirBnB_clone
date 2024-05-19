@@ -5,6 +5,8 @@ from models.city import City
 
 
 class TestCity(unittest.TestCase):
+    """Define a test class."""
+
     def test_city_attributes(self):
         """Define test_city."""
 
