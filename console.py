@@ -16,19 +16,27 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(sef, arg):
         """Quit command to exit the program."""
+
         return True
 
     def help_quit(self):
+        """Helps one quit."""
+
         print("Quit command to exit program")
 
     def do_EOF(self, arg):
         """Exit the program."""
+
         return True
 
     def help_EOF(self):
+        """Help for end of file."""
+
         print("Exit the program")
 
     def emptyline(self):
+        """Empty line."""
+
         pass
 
     def do_create(self, arg):
@@ -84,7 +92,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_all(self, arg):
-        """Prints all strings representation of instances based or not on the class name"""
+        """Prints all strings representation of instances based or not on the class name."""
 
         if arg and arg not in storage.classes:
             print("** class doesn't exist **")

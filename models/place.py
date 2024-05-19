@@ -2,7 +2,10 @@
 """Define a class place."""
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
+    """Define instances."""
+
     city_id = ""
     user_id = ""
     name = ""
