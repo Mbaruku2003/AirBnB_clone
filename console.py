@@ -38,47 +38,44 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("*** class name missing ***")
             return
-        if arg not in storage.classes:
+        try:
+            new_instance = eval(arg)()
+            new_instance.save()
+            print(new_instance.id)
+        except NameError:
             print("** class doesn't exist **")
-            return
-        obj = storage.classes[arg]()
-        obj.save()
-        print(obj.id)
 
     def do_show(self, arg):
         """Show string representation of an instance."""
 
         args = arg.split()
-        if not args:
+        if len(args) == 0:
             print("** class name missing **")
-            return
-        if args[0] not in storage.classes:
-            print("** class doesn't exist **")
             return
         if len(args) == 1:
             print("** instance id missing **")
             return
-        key = f"{args[0]}.{args[1]}"
-        if key in storage.all():
-            print(storage.all[key])
-        else:
+        cls_name, cls_id = args
+        key = f"{cls_name}.{cls_id}"
+        try:
+            obj = storage.all()[key]
+            print(obj)
+        except KeyError:
             print("** no instance found **")
 
     def do_destroy(self, arg):
         """Delete an instance based on class name and id."""
 
         args = arg.split()
-        if not args:
+        if len(args) == 0:
             print("** class name missing **")
-            return
-        if args[0] not in storage.classes:
-            print("** class doesn't exist **")
             return
         if len(args) == 1:
             print("** instance id missing **")
             return
-        key = f"{args[0]}.{args[1]}"
-        if key in storage.all():
+        cls_name, cls_id = args
+        key = f"{cls_name}.{cls-id}"
+        if key in storge.all():
             del storage.all()[key]
             storage.save()
         else:
@@ -87,28 +84,26 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, arg):
         """Prints all strings representation of instances."""
 
-        if arg and arg not in storage.classes:
-            print("** class doesn't exist **")
-            return
-        objs = [str(obj) for key, obj in storage.all().items() if not arg or arg == key.split('.')[0]]
-        print(objs)
+        if arg:
+            try:
+                cls = eval(arg)
+                obj_list = [str(obj) for obj in storage.all().values() if isinstance(obj, cls)]
+            except NameError:
+                print("** class doesn't exist **")
+                return
+        else:
+            obj_list = [str(obj) for obj in storage.all().values()]
+        print(obj_list)
 
     def do_update(self, arg):
         """Updates an instance based on the class name and id by adding or updating an attribute."""
 
         args = arg.split()
-        if not args:
+        if len(args) == 0:
             print("** class name missing **")
-            return
-        if args[0] not in storage.classes:
-            print("** class doesn't exist **")
             return
         if len(args) == 1:
             print("** instance id missing **")
-            return
-        key = f"{args[0]}.{args[1]}"
-        if key not in storage.all():
-            print("** no instance found **")
             return
         if len(args) == 2:
             print("** attribute name missing **")
@@ -116,16 +111,17 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 3:
             print("** value missing **")
             return
+        cls_name, cls_id, attr_name, attr_value = args
+        key = f"{cls_name}.{cls_id}"
+        if key not in storage.all():
+            print("** no instance found **")
+            return
         obj = storage.all()[key]
-        attr_name = args[2]
-        attr_value = args[3]
-        if hasattr(obj, attr_name):
-            attr_type = type(getattr(obj, attr_name))
-            setattr(obj, attr_name, attr_type(attr_value))
-            obj.save()
-        else:
-            print("** attribute not found **")
-
-
+        try:
+            attr_value = eval(attr_value)
+        except (SyntaxError, NameError):
+            pass
+        setattr(obj, attr_name, attr_value)
+        obj.save()
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
