@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Class Definition."""
 import cmd
 import json
 from models.base_model import BaseModel
