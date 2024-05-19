@@ -44,6 +44,8 @@ class TestFileStorage(unittest.TestCase):
             self.assertIn(self.obj_key, data)
 
     def test_reload(self):
+        """Tests for reload."""
+
         self.storage.new(self.obj)
         self.storage.save()
         self.storage.reload()

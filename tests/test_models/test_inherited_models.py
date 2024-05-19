@@ -1,4 +1,5 @@
 #!/user/bin/python3
+"""Test for class."""
 import unittest
 from models.state import State
 from models.city import City
@@ -9,22 +10,30 @@ from models.review import Review
 
 class TestModels(unittest.TestCase):
     def test_state(self):
+        """Test for state."""
+
         state = State()
         self.assertEqual(state.name, "")
 
 class TestCity(unittest.TestCase):
     def test_city_attribute(self):
+        """Test for city."""
+
         city = City()
         self.assertEqual(city.state_id, "")
         self.assertEqual(city.name, "")
 
 class TestAmenity(unittest.TestCase):
     def test_amenity_attributes(self):
+        """Test for amenity."""
+
         amenity = Amenity()
         self.assertEqual(amenity.name, "")
 
 class TestPlace(unittest.TestCase):
     def test_place_attribute(self):
+        """Test for place."""
+
         place = Place()
         self.assertEqual(place.city_id, "")
         self.assertEqual(place.user_id, "")
@@ -40,6 +49,8 @@ class TestPlace(unittest.TestCase):
 
 class TestReview(unittest.TestCase):
     def test_review_attributes(self):
+        """Test for review."""
+
         review = Review()
         self.assertEqual(review.place_id, "")
         self.assertEqual(review.user_id, "")
