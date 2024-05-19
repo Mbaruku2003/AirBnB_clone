@@ -35,6 +35,3 @@ class TestAddFunction(unittest.TestCase):
     def test_add_floats(self):
         """Test add with floats."""
         self.assertAlmostEqual(add(1.5, 2.5), 4.0)
-
-if __name__ == "__main__":
-    unittest.main()
