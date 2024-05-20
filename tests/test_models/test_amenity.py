@@ -11,4 +11,4 @@ class TestAmenity(unittest.TestCase):
         """Tests for amenity."""
 
         amenity = Amenity()
-        self.assertEqual(amenity_name, "")
+        self.assertEqual(amenity.name, "")

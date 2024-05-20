@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Define testsing class."""
-import models
+import uuid
 from models.base_model import BaseModel
 from datetime import datetime
 import unittest
@@ -50,4 +50,4 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(obj_dict['created_at']), str)
         self.assertEqual(type(obj_dict['updated_at']), str)
         self.assertEqual(obj_dict['created_at'], obj.created_at.isoformat())
-        self.assertEqual(obj_dict['created_at'], obj.updated_at.isoformat())
+        self.assertEqual(obj_dict['updated_at'], obj.updated_at.isoformat())
