@@ -87,7 +87,8 @@ class HBNBCommand(cmd.Cmd):
         if arg:
             try:
                 cls = eval(arg)
-                obj_list = [str(obj) for obj in storage.all().values() if isinstance(obj, cls)]
+                obj_list = [
+                        str(obj) for obj in storage.all().values() if isinstance(obj, cls)]
             except NameError:
                 print("** class doesn't exist **")
                 return
@@ -96,7 +97,7 @@ class HBNBCommand(cmd.Cmd):
         print(obj_list)
 
     def do_update(self, arg):
-        """Updates an instance based on the class name and id by adding or updating an attribute."""
+        """Updates an instance based on the class name and id."""
 
         args = arg.split()
         if len(args) == 0:
@@ -123,5 +124,7 @@ class HBNBCommand(cmd.Cmd):
             pass
         setattr(obj, attr_name, attr_value)
         obj.save()
+
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
