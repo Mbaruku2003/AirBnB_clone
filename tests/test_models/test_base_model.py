@@ -23,8 +23,8 @@ class TestBaseModel(unittest.TestCase):
     def test_unique_id(self):
         """Test id."""
 
-        obj1.BaseModel()
-        obj2.BaseModel()
+        obj1 = BaseModel()
+        obj2 = BaseModel()
         self.assertNotEqual(obj1.id, obj2.id)
 
     def test_str_method(self):
