@@ -7,7 +7,7 @@ header{
     align-items: center
 }
 header a{
-    background-image: url("../images/logo\ \(1\).png");
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     background-position: center;
     display:block;
