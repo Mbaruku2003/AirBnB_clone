@@ -1,5 +1,5 @@
 header{
-    background-color: white;
+    background-color: #ffffff;
     height:70px;
     width:100%;
     border-bottom: 1px solid #CCCCCC;
@@ -7,7 +7,7 @@ header{
     align-items: center
 }
 header a{
-    background-image: url(../images/logo.png);
+    background-image: url("../images/logo\ \(1\).png");
     background-repeat: no-repeat;
     background-position: center;
     display:block;
