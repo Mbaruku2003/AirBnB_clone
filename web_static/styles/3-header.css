@@ -8,7 +8,7 @@ header{
 }
 header a{
     background-image: url(../images/logo.png);
-    background-repeat: round;
+    background-repeat: repeat;
     background-position: center;
     display:block;
     width:142px;
