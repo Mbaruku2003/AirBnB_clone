@@ -12,13 +12,13 @@
     display: grid;
     place-content: center;
 }
-.location h3
+.locations h3
 .amenities h3{
     font-weight: 600;
     margin: 0;
     padding: 0;
 }
-.location h4
+.locations h4
 .amenities h4{
     font-weight: 400;
     font-size: 14px;

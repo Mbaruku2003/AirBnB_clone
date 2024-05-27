@@ -8,4 +8,12 @@ body{
 .container{
     max-width: 1000px;
     margin: 30px auto;
+    display: grid;
+}
+header, footer{
+    width:100%;
+}
+footer{
+    position:fixed;
+    bottom: 0;
 }
