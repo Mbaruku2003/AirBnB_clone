@@ -5,23 +5,17 @@
 }
 .locations{
     border-right: 1px solid #DDDDDD;
-    display: flex;
-    align-items: center;
-    align-content: center;
-
+    
       
 }
 .amenities{
     margin-right: auto;
-    display: flex;
-    margin-right: auto;
+    
 }
 .locations h3,
 .amenities h3{
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    align-content: center;
+    
     
     
 }
@@ -29,7 +23,5 @@
 .amenities h4{
     font-weight: 400;
     font-size: 14px;
-    display: flex;
-    align-content: center;
-    align-content: center;
+    
 }
