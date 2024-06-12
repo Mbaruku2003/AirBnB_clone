@@ -14,8 +14,7 @@
 .amenities{
     margin-right: auto;
     display: flex;
-    align-items: center;
-    align-content: center;
+    margin-right: auto;
 }
 .locations h3,
 .amenities h3{
