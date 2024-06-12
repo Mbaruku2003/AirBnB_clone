@@ -16,7 +16,7 @@ button{
     border: none;
     border-radius: 4px;
     transition: 0.5s;
-    margin: 30px;
+    margin: auto 30px;
     
 }
 button:hover{
