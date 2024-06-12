@@ -6,13 +6,11 @@
 .locations{
     border-right: 1px solid #DDDDDD;
     display: grid;
-    place-content: center;
     position: absolute   
 }
 .amenities{
     margin-right: auto;
     display: grid;
-    place-content: center;
     position: absolute;
 }
 .locations h3,
