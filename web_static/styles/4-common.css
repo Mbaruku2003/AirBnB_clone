@@ -12,6 +12,7 @@ body{
 }
 header, footer{
     width:100%;
+    align-items: center;
 }
 footer{
     position:fixed;
