@@ -9,8 +9,6 @@ body{
     max-width: 1000px;
     margin: 30px auto;
     display: block;
-    height: 100px;
-    background-color: green;
 }
 header, footer{
     width:100%;
