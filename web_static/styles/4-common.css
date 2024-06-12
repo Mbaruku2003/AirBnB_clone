@@ -7,7 +7,7 @@ body{
 }
 .container{
     max-width: 1000px;
-    margin: 30px center;
+    margin: 30px 30px ;
     display: grid;
     height: 100px;
     background-color: green;
