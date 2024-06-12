@@ -9,6 +9,7 @@ body{
     max-width: 1000px;
     margin: 30px auto;
     display: grid;
+    height: 100px;
 }
 header, footer{
     width:100%;
