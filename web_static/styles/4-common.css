@@ -9,11 +9,3 @@ body{
     max-width: 1000px;
     margin: 30px auto;
 }
-header, footer{
-    width:100%;
-    align-items: center;
-}
-footer{
-    position:fixed;
-    bottom: 0;
-}
