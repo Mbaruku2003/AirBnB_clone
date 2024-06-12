@@ -7,7 +7,7 @@ body{
 }
 .container{
     max-width: 1000px;
-    margin: auto auto;
+    margin: flex auto;
     display: block;
     height: 100px;
     background-color: green;
