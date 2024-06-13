@@ -17,7 +17,8 @@ button{
     border: none;
     border-radius: 4px;
     transition: 0.5s;
-    margin-left: 30px;
+    margin-right: 30px;
+    vertical-align: middle;
 }
 button:hover{
     opacity: 90%;
